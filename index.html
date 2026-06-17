@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e10600" />
+  <meta name="description" content="Habibs Hair & Beauty Salon — Pune's premier destination for hair colour, keratin, hair spa & beauty. Book your transformation today." />
+  <title>Habibs — Hair &amp; Beauty Salon · Pune</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Page loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__word" data-text="HABIBS">HABIBS</span>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <span class="loader__count" id="loaderCount">0</span>
+    </div>
+  </div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" data-cursor="hover">
+      <span class="nav__mark">H</span>
+      <span class="nav__name">Habibs</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#brand" data-cursor="hover">Salon</a>
+      <a href="#services" data-cursor="hover">Services</a>
+      <a href="#gallery" data-cursor="hover">Gallery</a>
+      <a href="#voices" data-cursor="hover">Reviews</a>
+      <a href="#visit" data-cursor="hover">Visit</a>
+    </nav>
+    <a href="tel:07030661661" class="nav__cta" data-cursor="hover">
+      <span>Book Now</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu">
+    <a href="#brand">Salon</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#voices">Reviews</a>
+    <a href="#visit">Visit</a>
+    <a href="tel:07030661661" class="menu__call">070306 61661</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <span class="hero__eyebrow hero__eyebrow--tl">EST · PUNE</span>
+      <span class="hero__eyebrow hero__eyebrow--tr">WARJE · KARVENAGAR</span>
+
+      <div class="hero__content">
+        <p class="hero__tag reveal-line"><span>Hair · Beauty · Confidence</span></p>
+        <h1 class="hero__title">
+          <span class="hero__line"><span class="hero__word" data-cursor="hover">HABIBS</span></span>
+          <span class="hero__line hero__line--script"><em>salon</em></span>
+        </h1>
+        <div class="hero__meta">
+          <div class="hero__rating">
+            <span class="hero__stars" aria-hidden="true">★★★★<span class="half">★</span></span>
+            <strong>4.1</strong>
+            <span>/ 946 reviews on Google</span>
+          </div>
+          <a href="#visit" class="hero__book" data-cursor="hover">
+            <span>Reserve a chair</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Hair Colour</span><span class="dot">✦</span>
+        <span>Keratin Treatment</span><span class="dot">✦</span>
+        <span>Hair Spa</span><span class="dot">✦</span>
+        <span>Head Massage</span><span class="dot">✦</span>
+        <span>Facial &amp; Cleanup</span><span class="dot">✦</span>
+        <span>Bridal Glow</span><span class="dot">✦</span>
+        <span>Hair Colour</span><span class="dot">✦</span>
+        <span>Keratin Treatment</span><span class="dot">✦</span>
+        <span>Hair Spa</span><span class="dot">✦</span>
+        <span>Head Massage</span><span class="dot">✦</span>
+        <span>Facial &amp; Cleanup</span><span class="dot">✦</span>
+        <span>Bridal Glow</span><span class="dot">✦</span>
+      </div>
+    </div>
+
+    <!-- ===== BRAND / ABOUT ===== -->
+    <section class="brand" id="brand">
+      <span class="section-watermark" data-parallax="0.2">SALON</span>
+      <div class="brand__grid">
+        <div class="brand__left">
+          <span class="section-index">01 — The Salon</span>
+          <h2 class="brand__head reveal-up">
+            Where every <em>cut</em>, colour &amp; curl is a small act of confidence.
+          </h2>
+        </div>
+        <div class="brand__right">
+          <p class="reveal-up">For over a decade, Habibs Hair &amp; Beauty Salon has been Warje &amp; Karvenagar's go-to address for transformation. From precision haircuts to glossy keratin and indulgent hair spas — our chairs are where Pune comes to look, and feel, its best.</p>
+          <div class="brand__stats">
+            <div class="stat reveal-up"><span class="stat__num" data-count="946">0</span><span class="stat__label">Reviews</span></div>
+            <div class="stat reveal-up"><span class="stat__num" data-count="12">0</span><span class="stat__label">Stylists</span></div>
+            <div class="stat reveal-up"><span class="stat__num" data-count="40">0</span><span class="stat__suffix">k+</span><span class="stat__label">Happy clients</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+      <div class="services__head">
+        <span class="section-index light">02 — What we do</span>
+        <h2 class="services__title reveal-up">Services</h2>
+      </div>
+      <ul class="svc-list" id="svcList">
+        <li class="svc" data-img="hair-colour">
+          <span class="svc__no">01</span>
+          <h3 class="svc__name">Hair Colour</h3>
+          <p class="svc__desc">Global, balayage &amp; root touch-ups in ammonia-free, glossy tones.</p>
+          <span class="svc__price">from ₹899</span>
+          <span class="svc__arrow">↗</span>
+        </li>
+        <li class="svc" data-img="keratin">
+          <span class="svc__no">02</span>
+          <h3 class="svc__name">Keratin Treatment</h3>
+          <p class="svc__desc">Frizz-free, mirror-smooth hair that lasts for months.</p>
+          <span class="svc__price">from ₹2499</span>
+          <span class="svc__arrow">↗</span>
+        </li>
+        <li class="svc" data-img="hair-spa">
+          <span class="svc__no">03</span>
+          <h3 class="svc__name">Hair Spa &amp; Treatment</h3>
+          <p class="svc__desc">Deep nourishment rituals to repair, hydrate and revive.</p>
+          <span class="svc__price">from ₹699</span>
+          <span class="svc__arrow">↗</span>
+        </li>
+        <li class="svc" data-img="haircut">
+          <span class="svc__no">04</span>
+          <h3 class="svc__name">Cut &amp; Style</h3>
+          <p class="svc__desc">Precision cuts and blow-dry styling tailored to your face.</p>
+          <span class="svc__price">from ₹300</span>
+          <span class="svc__arrow">↗</span>
+        </li>
+        <li class="svc" data-img="facial">
+          <span class="svc__no">05</span>
+          <h3 class="svc__name">Facial &amp; Cleanup</h3>
+          <p class="svc__desc">Glow-boosting facials and clean-ups for radiant skin.</p>
+          <span class="svc__price">from ₹599</span>
+          <span class="svc__arrow">↗</span>
+        </li>
+        <li class="svc" data-img="massage">
+          <span class="svc__no">06</span>
+          <h3 class="svc__name">Head Massage</h3>
+          <p class="svc__desc">Tension-melting champi to relax the mind and roots.</p>
+          <span class="svc__price">from ₹250</span>
+          <span class="svc__arrow">↗</span>
+        </li>
+      </ul>
+      <div class="svc-hover" id="svcHover" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__head">
+        <span class="section-index">03 — The Look Book</span>
+        <h2 class="gallery__title reveal-up">Gallery</h2>
+        <p class="gallery__sub reveal-up">A few of the transformations that walk out of our doors.</p>
+      </div>
+      <div class="gallery__grid">
+        <figure class="gcard gcard--a" data-parallax="0.06"><div class="gcard__img" style="--h:1"></div><figcaption>Glossy Balayage</figcaption></figure>
+        <figure class="gcard gcard--b" data-parallax="-0.05"><div class="gcard__img" style="--h:2"></div><figcaption>Keratin Smooth</figcaption></figure>
+        <figure class="gcard gcard--c" data-parallax="0.08"><div class="gcard__img" style="--h:3"></div><figcaption>Bridal Glow</figcaption></figure>
+        <figure class="gcard gcard--d" data-parallax="-0.04"><div class="gcard__img" style="--h:4"></div><figcaption>Sharp Fade</figcaption></figure>
+        <figure class="gcard gcard--e" data-parallax="0.05"><div class="gcard__img" style="--h:5"></div><figcaption>Spa Ritual</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="voices" id="voices">
+      <span class="section-watermark light" data-parallax="0.15">LOVED</span>
+      <div class="voices__head">
+        <span class="section-index light">04 — In their words</span>
+        <h2 class="voices__title reveal-up">Reviews</h2>
+        <div class="voices__score reveal-up">
+          <strong>4.1</strong>
+          <span class="voices__stars">★★★★<span class="half">★</span></span>
+          <span class="voices__count">946 Google reviews</span>
+        </div>
+      </div>
+      <div class="voices__grid">
+        <blockquote class="vcard reveal-up">
+          <span class="vcard__stars">★★★★★</span>
+          <p>"This was our last day in Pune and we wanted a good look for our next journey — we all got the deep-cleaning, treatment &amp; blow-dry package. We loved everything. A must visit for any hair care needs."</p>
+          <footer><strong>Sheetal B</strong><span>Local Guide · 43 reviews</span></footer>
+        </blockquote>
+        <blockquote class="vcard reveal-up">
+          <span class="vcard__stars">★★★★★</span>
+          <p>"Great service and the hairstylist gave me an awesome haircut. Had a great experience with hair colour and facial cleanup services too."</p>
+          <footer><strong>True Guide</strong><span>Local Guide · 190 reviews</span></footer>
+        </blockquote>
+        <blockquote class="vcard reveal-up">
+          <span class="vcard__stars">★★★★★</span>
+          <p>"Got a haircut done by Mauli — it was good and the staff was friendly. Reasonable pricing and a clean, comfortable space right on Warje Malwadi Road."</p>
+          <footer><strong>Verified Visitor</strong><span>Google review</span></footer>
+        </blockquote>
+      </div>
+      <a href="#visit" class="voices__cta" data-cursor="hover">Write your own story →</a>
+    </section>
+
+    <!-- ===== VISIT / CONTACT ===== -->
+    <section class="visit" id="visit">
+      <span class="section-watermark" data-parallax="0.2">VISIT</span>
+      <div class="visit__grid">
+        <div class="visit__left">
+          <span class="section-index">05 — Come on in</span>
+          <h2 class="visit__title reveal-up">Book your<br><em>glow-up.</em></h2>
+          <a href="tel:07030661661" class="visit__phone" data-cursor="hover">070306 61661</a>
+          <div class="visit__rows">
+            <div class="visit__row reveal-up">
+              <span class="visit__k">Address</span>
+              <span class="visit__v">Kakade Plaza, 2, Warje Malwadi Rd,<br>Warje Jakat Naka, Karvenagar,<br>Pune, Maharashtra 411052</span>
+            </div>
+            <div class="visit__row reveal-up">
+              <span class="visit__k">Hours</span>
+              <span class="visit__v">Mon – Sun · 9:00 AM – 9:00 PM<br><i id="openState">Checking hours…</i></span>
+            </div>
+            <div class="visit__row reveal-up">
+              <span class="visit__k">Follow</span>
+              <span class="visit__v"><a href="#" data-cursor="hover">Instagram</a> · <a href="#" data-cursor="hover">Facebook</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="visit__right">
+          <a class="visit__map" href="https://maps.google.com/?q=Habibs+Hair+Beauty+Salon+Warje+Pune" target="_blank" rel="noopener" data-cursor="hover">
+            <div class="visit__map-inner">
+              <span class="visit__pin">📍</span>
+              <strong>Habibs Hair &amp; Beauty Salon</strong>
+              <span>Warje Malwadi Rd, Karvenagar, Pune</span>
+              <span class="visit__map-cta">Open in Google Maps ↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__big" data-cursor="hover">HABIBS</div>
+    <div class="footer__row">
+      <div class="footer__col">
+        <span class="footer__label">Habibs Hair &amp; Beauty Salon</span>
+        <p>Warje Malwadi Rd, Karvenagar,<br>Pune, Maharashtra 411052</p>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Reach us</span>
+        <a href="tel:07030661661">070306 61661</a>
+        <a href="https://maps.google.com/?q=Habibs+Hair+Beauty+Salon+Warje+Pune" target="_blank" rel="noopener">Directions ↗</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Hours</span>
+        <p>Open daily<br>9:00 AM – 9:00 PM</p>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© <span id="year"></span> Habibs Hair &amp; Beauty Salon</span>
+      <a href="#top" data-cursor="hover">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
