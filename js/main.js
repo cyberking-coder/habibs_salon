@@ -170,25 +170,27 @@
 
   /* ---------- Services hover image ---------- */
   const svcHover = document.getElementById("svcHover");
-  const svcGradients = {
-    "hair-colour": "radial-gradient(circle at 30% 30%, #ff5a4d, transparent 45%), linear-gradient(135deg,#1a0c0c,#e10600)",
-    "keratin": "radial-gradient(circle at 70% 20%, #e10600, transparent 50%), linear-gradient(160deg,#0c0a0a,#3a0a08)",
-    "hair-spa": "radial-gradient(circle at 50% 80%, #ff8076, transparent 45%), linear-gradient(135deg,#2a0908,#b30500)",
-    "haircut": "radial-gradient(circle at 20% 60%, #ff2d20, transparent 55%), linear-gradient(120deg,#120a0a,#e10600)",
-    "facial": "radial-gradient(circle at 80% 30%, #ff5a4d, transparent 50%), linear-gradient(150deg,#0c0a0a,#7a0200)",
-    "massage": "radial-gradient(circle at 40% 70%, #e10600, transparent 50%), linear-gradient(140deg,#1a0c0c,#3a0a08)",
+  const svcArt = {
+    "hair-colour": "assets/art-colour.svg",
+    "keratin": "assets/art-keratin.svg",
+    "hair-spa": "assets/art-spa.svg",
+    "haircut": "assets/art-cut.svg",
+    "facial": "assets/art-facial.svg",
+    "massage": "assets/art-massage.svg",
   };
   if (svcHover && canHover) {
     let mx = 0, my = 0, hx = 0, hy = 0, active = false;
     document.querySelectorAll(".svc").forEach((svc) => {
       svc.addEventListener("mouseenter", () => {
         active = true;
-        svcHover.style.backgroundImage = svcGradients[svc.dataset.img] || "";
+        svcHover.style.backgroundImage = "url('" + (svcArt[svc.dataset.img] || "") + "')";
         svcHover.classList.add("show");
+        document.body.classList.add("svc-hovering");
       });
       svc.addEventListener("mouseleave", () => {
         active = false;
         svcHover.classList.remove("show");
+        document.body.classList.remove("svc-hovering");
       });
     });
     window.addEventListener("mousemove", (e) => { mx = e.clientX; my = e.clientY; });
