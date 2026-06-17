@@ -12,6 +12,8 @@ full-bleed colour sections, and smooth scroll-driven motion.
 - **Sticky nav** that hides on scroll-down, plus a full-screen mobile menu
 - **Hero** with giant `HABIBS` lockup, live rating, and scroll cue
 - **Infinite marquee** of services
+- **Smooth momentum scrolling** (Lenis) across the whole page
+- **Scroll progress bar**, **parallax** layers, and **velocity-reactive** gallery zoom
 - **Scroll reveals** + **count-up stats** via `IntersectionObserver`
 - **Services list** with a cursor-following image card on hover
 - **Parallax** section watermarks & gallery cards
@@ -40,6 +42,17 @@ python3 -m http.server 8000
 
 Fonts load from Google Fonts; everything else (textures, gallery imagery) is
 generated with CSS so the site works with no image assets.
+
+## 🌐 Deploy (GitHub Pages)
+
+A workflow at `.github/workflows/deploy-pages.yml` builds and publishes the
+site automatically on every push to `main` or the feature branch. It uses the
+official GitHub Pages Actions and auto-enables Pages on first run.
+
+If your repo settings block Actions from enabling Pages, do it once manually:
+**Settings → Pages → Build and deployment → Source: GitHub Actions**, then
+re-run the workflow. The live URL appears in the workflow run and under
+Settings → Pages (typically `https://<user>.github.io/habibs_salon/`).
 
 ## 🎨 Theme
 

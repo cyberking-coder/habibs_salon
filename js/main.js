@@ -122,19 +122,51 @@
   }, { threshold: 0.5 });
   counters.forEach((c) => cio.observe(c));
 
-  /* ---------- Parallax ---------- */
+  /* ---------- Lenis smooth scroll ---------- */
+  let lenis = null;
+  if (window.Lenis && !reduce) {
+    lenis = new window.Lenis({
+      lerp: 0.09,
+      wheelMultiplier: 1,
+      smoothWheel: true,
+    });
+  }
+
+  /* ---------- Parallax + scroll progress + velocity ---------- */
   const para = document.querySelectorAll("[data-parallax]");
-  if (!reduce) {
-    window.addEventListener("scroll", () => {
-      const vh = window.innerHeight;
+  const scrollBar = document.getElementById("scrollBar");
+
+  function applyScrollFx(velocity) {
+    const vh = window.innerHeight;
+    if (!reduce) {
       para.forEach((el) => {
         const r = el.getBoundingClientRect();
         const speed = parseFloat(el.dataset.parallax);
         const offset = (r.top + r.height / 2 - vh / 2) * speed;
-        el.style.transform = `translateY(${offset}px)`;
+        el.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0)`;
       });
-    }, { passive: true });
+    }
+    // scroll progress
+    if (scrollBar) {
+      const max = document.documentElement.scrollHeight - vh;
+      const prog = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+      scrollBar.style.width = (prog * 100).toFixed(2) + "%";
+    }
+    // velocity-driven zoom on gallery imagery (via CSS var, combines with hover)
+    if (!reduce) {
+      const v = Math.min(Math.abs(velocity || 0) * 0.01, 0.05);
+      document.documentElement.style.setProperty("--sv", v.toFixed(3));
+    }
   }
+
+  if (lenis) {
+    lenis.on("scroll", (e) => applyScrollFx(e.velocity));
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  } else {
+    window.addEventListener("scroll", () => applyScrollFx(0), { passive: true });
+  }
+  applyScrollFx(0);
 
   /* ---------- Services hover image ---------- */
   const svcHover = document.getElementById("svcHover");
@@ -184,8 +216,19 @@
       const target = document.querySelector(id);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+        if (lenis) lenis.scrollTo(target, { offset: -10, duration: 1.2 });
+        else target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
       }
     });
   });
+
+  /* ---------- Stop/start scroll when mobile menu open ---------- */
+  if (burger && lenis) {
+    burger.addEventListener("click", () => {
+      menu.classList.contains("open") ? lenis.stop() : lenis.start();
+    });
+    menu && menu.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => lenis.start())
+    );
+  }
 })();

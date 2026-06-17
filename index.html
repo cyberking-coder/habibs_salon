@@ -30,6 +30,9 @@
   <!-- Grain overlay -->
   <div class="grain" aria-hidden="true"></div>
 
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
   <!-- Navigation -->
   <header class="nav" id="nav">
     <a href="#top" class="nav__brand" data-cursor="hover">
@@ -64,7 +67,7 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__bg" aria-hidden="true" data-parallax="0.12"></div>
       <span class="hero__eyebrow hero__eyebrow--tl">EST · PUNE</span>
       <span class="hero__eyebrow hero__eyebrow--tr">WARJE · KARVENAGAR</span>
 
@@ -293,6 +296,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
