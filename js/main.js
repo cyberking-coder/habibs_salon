@@ -168,39 +168,6 @@
   }
   applyScrollFx(0);
 
-  /* ---------- Services hover image ---------- */
-  const svcHover = document.getElementById("svcHover");
-  const svcArt = {
-    "hair-colour": "assets/art-colour.svg",
-    "keratin": "assets/art-keratin.svg",
-    "hair-spa": "assets/art-spa.svg",
-    "haircut": "assets/art-cut.svg",
-    "facial": "assets/art-facial.svg",
-    "massage": "assets/art-massage.svg",
-  };
-  if (svcHover && canHover) {
-    let mx = 0, my = 0, hx = 0, hy = 0, active = false;
-    document.querySelectorAll(".svc").forEach((svc) => {
-      svc.addEventListener("mouseenter", () => {
-        active = true;
-        svcHover.style.backgroundImage = "url('" + (svcArt[svc.dataset.img] || "") + "')";
-        svcHover.classList.add("show");
-        document.body.classList.add("svc-hovering");
-      });
-      svc.addEventListener("mouseleave", () => {
-        active = false;
-        svcHover.classList.remove("show");
-        document.body.classList.remove("svc-hovering");
-      });
-    });
-    window.addEventListener("mousemove", (e) => { mx = e.clientX; my = e.clientY; });
-    (function loop() {
-      hx += (mx - hx) * 0.12; hy += (my - hy) * 0.12;
-      if (active) svcHover.style.left = hx + "px", (svcHover.style.top = hy + "px");
-      requestAnimationFrame(loop);
-    })();
-  }
-
   /* ---------- Open / closed state ---------- */
   const openState = document.getElementById("openState");
   if (openState) {

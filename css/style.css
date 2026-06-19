@@ -87,8 +87,6 @@ em { font-style: italic; }
   transform: translate(-50%, -50%);
 }
 .cursor.is-hover { width: 70px; height: 70px; background: #fff; }
-.cursor, .cursor-dot { transition: opacity .3s var(--ease), width .35s var(--ease), height .35s var(--ease), background .35s var(--ease); }
-body.svc-hovering .cursor, body.svc-hovering .cursor-dot { opacity: 0; }
 @media (hover: none) { .cursor, .cursor-dot { display: none; } }
 
 /* ---------- Loader ---------- */
@@ -317,13 +315,6 @@ body.svc-hovering .cursor, body.svc-hovering .cursor-dot { opacity: 0; }
 @media (hover:hover) {
   .svc::before { content:""; position:absolute; inset:0; background:var(--red); transform: scaleY(0); transform-origin: bottom; z-index:-1; transition: transform .5s var(--ease); }
 }
-.svc-hover {
-  position: fixed; z-index: 5; width: 300px; height: 380px; border-radius: 8px;
-  pointer-events: none; opacity: 0; transform: translate(-50%,-50%) scale(.8) rotate(-6deg);
-  transition: opacity .4s var(--ease), transform .4s var(--ease); background-size: cover; background-position: center;
-  box-shadow: 0 30px 60px rgba(0,0,0,.3); overflow: hidden;
-}
-.svc-hover.show { opacity: 1; transform: translate(-50%,-50%) scale(1) rotate(0); }
 
 /* =========================================================
    GALLERY
