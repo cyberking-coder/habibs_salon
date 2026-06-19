@@ -396,9 +396,14 @@ body.is-light .nav { color: var(--ink); }
   position: absolute; left: 1.1rem; bottom: 1.1rem; z-index: 3;
   font-family: "Archivo"; font-weight: 700; font-size: .9rem; letter-spacing: .02em;
   background: rgba(225,6,0,.92); padding: .35rem .8rem; border-radius: 4px;
-  transform: translateY(120%); transition: transform .5s var(--ease);
+  opacity: 0; transform: translateY(14px); pointer-events: none;
+  transition: opacity .45s var(--ease), transform .5s var(--ease);
 }
-.gcard:hover figcaption { transform: none; }
+.gcard:hover figcaption { opacity: 1; transform: none; }
+/* touch devices have no hover — keep names visible there */
+@media (hover: none) {
+  .gcard figcaption { opacity: 1; transform: none; }
+}
 .gcard--a { grid-column: span 5; aspect-ratio: 4/5; }
 .gcard--b { grid-column: span 4; aspect-ratio: 4/5; }
 .gcard--c { grid-column: span 3; aspect-ratio: 3/5; }
