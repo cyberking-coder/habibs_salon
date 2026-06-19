@@ -329,30 +329,34 @@ em { font-style: italic; }
   max-width: var(--maxw); margin: 0 auto; display: grid;
   grid-template-columns: repeat(12, 1fr); gap: clamp(.8rem,1.6vw,1.4rem);
 }
-.gcard { position: relative; overflow: hidden; border-radius: 6px; }
-.gcard__img { width: 100%; height: 100%; transform: scale(calc(1 + var(--sv, 0))); transition: transform 1.1s var(--ease); }
+.gcard { position: relative; overflow: hidden; border-radius: 6px; background: #1a0808; }
+.gcard__img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: saturate(1.12) contrast(1.04);
+  transform: scale(calc(1 + var(--sv, 0))); transition: transform 1.1s var(--ease);
+}
 .gcard:hover .gcard__img { transform: scale(calc(1.06 + var(--sv, 0))); transition: transform .9s var(--ease); }
+/* red brand duotone tint + caption-contrast vignette */
+.gcard::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: var(--red); mix-blend-mode: multiply; opacity: .34;
+}
+.gcard::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(180deg, rgba(12,10,10,.05) 35%, rgba(12,10,10,.6));
+}
 .gcard figcaption {
-  position: absolute; left: 1.1rem; bottom: 1.1rem; z-index: 2;
+  position: absolute; left: 1.1rem; bottom: 1.1rem; z-index: 3;
   font-family: "Archivo"; font-weight: 700; font-size: .9rem; letter-spacing: .02em;
   background: rgba(225,6,0,.92); padding: .35rem .8rem; border-radius: 4px;
   transform: translateY(120%); transition: transform .5s var(--ease);
 }
 .gcard:hover figcaption { transform: none; }
-.gcard__img::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.4)); }
 .gcard--a { grid-column: span 5; aspect-ratio: 4/5; }
 .gcard--b { grid-column: span 4; aspect-ratio: 4/5; }
 .gcard--c { grid-column: span 3; aspect-ratio: 3/5; }
 .gcard--d { grid-column: span 7; aspect-ratio: 16/9; }
 .gcard--e { grid-column: span 5; aspect-ratio: 16/9; }
-
-/* gallery imagery via self-contained SVG posters (no external assets) */
-.gcard__img { background-size: cover; background-position: center; }
-.gcard--a .gcard__img { background-image: url("../assets/art-colour.svg"); }
-.gcard--b .gcard__img { background-image: url("../assets/art-keratin.svg"); }
-.gcard--c .gcard__img { background-image: url("../assets/art-facial.svg"); }
-.gcard--d .gcard__img { background-image: url("../assets/art-cut.svg"); }
-.gcard--e .gcard__img { background-image: url("../assets/art-spa.svg"); }
 
 /* =========================================================
    VOICES / REVIEWS
