@@ -168,6 +168,20 @@
   }
   applyScrollFx(0);
 
+  /* ---------- Light-section theme (nav + cursor go dark over cream) ---------- */
+  const lightSections = document.querySelectorAll(".services, .voices");
+  if (lightSections.length) {
+    const lit = new Set();
+    const lio = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) lit.add(e.target);
+        else lit.delete(e.target);
+      });
+      document.body.classList.toggle("is-light", lit.size > 0);
+    }, { rootMargin: "0px 0px -90% 0px", threshold: 0 });
+    lightSections.forEach((s) => lio.observe(s));
+  }
+
   /* ---------- Open / closed state ---------- */
   const openState = document.getElementById("openState");
   if (openState) {
