@@ -1,7 +1,7 @@
-# Habibs Hair & Beauty Salon — Website
+# Lookout Hair & Beauty Salon — Website
 
-An awwwards-style, single-page marketing site for **Habibs Hair & Beauty Salon**
-in Warje / Karvenagar, Pune. Built with a bold **red + white + black** identity
+An awwwards-style, single-page marketing site for **Lookout Hair & Beauty Salon**
+in Bandra West, Mumbai. Built with a bold **red + white + black** identity
 inspired by editorial wine-brand layouts: oversized display typography,
 full-bleed colour sections, and smooth scroll-driven motion.
 
@@ -10,7 +10,7 @@ full-bleed colour sections, and smooth scroll-driven motion.
 - **Animated preloader** with progress counter
 - **Custom blend-mode cursor** (desktop) with hover states
 - **Sticky nav** that hides on scroll-down, plus a full-screen mobile menu
-- **Hero** with giant `HABIBS` lockup, live rating, and scroll cue
+- **Hero** with giant `LOOKOUT` lockup, live rating, and scroll cue
 - **Infinite marquee** of services
 - **Smooth momentum scrolling** (Lenis) across the whole page
 - **Scroll progress bar**, **parallax** layers, and **velocity-reactive** gallery zoom
@@ -68,5 +68,5 @@ Edit the tokens at the top of `css/style.css`:
 
 ## 📍 Salon
 
-> Kakade Plaza, 2, Warje Malwadi Rd, Warje Jakat Naka, Karvenagar,
-> Pune, Maharashtra 411052 · 📞 070306 61661 · Open daily 9 AM – 9 PM
+> Shop 12, Linking Road, Bandra West,
+> Mumbai, Maharashtra 400050 · 📞 070306 61661 · Open daily 9 AM – 9 PM

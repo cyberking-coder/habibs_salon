@@ -1,5 +1,5 @@
 /* =========================================================
-   HABIBS — interactions
+   LOOKOUT — interactions
    Vanilla JS · no dependencies
    ========================================================= */
 (function () {
