@@ -185,9 +185,10 @@
   /* ---------- Open / closed state ---------- */
   const openState = document.getElementById("openState");
   if (openState) {
-    const h = new Date().getHours();
-    const open = h >= 9 && h < 21;
-    openState.textContent = open ? "● Open now" : "● Closed · Opens 9 AM";
+    const now = new Date();
+    const mins = now.getHours() * 60 + now.getMinutes();
+    const open = mins >= 540 && mins < 1290; // 9:00 AM – 9:30 PM
+    openState.textContent = open ? "● Open now · Closes 9:30 PM" : "● Closed · Opens 9 AM";
     openState.style.color = open ? "#0c0a0a" : "rgba(255,255,255,.85)";
   }
 

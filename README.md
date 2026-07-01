@@ -1,7 +1,7 @@
-# Lookout Hair & Beauty Salon — Website
+# Lookout Salon & Academy — Website
 
-An awwwards-style, single-page marketing site for **Lookout Hair & Beauty Salon**
-in Bandra West, Mumbai. Built with a bold **red + white + black** identity
+An awwwards-style, single-page marketing site for **Lookout Salon & Academy**
+in Kandivali West, Mumbai. Built with a bold **red + white + black** identity
 inspired by editorial wine-brand layouts: oversized display typography,
 full-bleed colour sections, and smooth scroll-driven motion.
 
@@ -17,7 +17,7 @@ full-bleed colour sections, and smooth scroll-driven motion.
 - **Scroll reveals** + **count-up stats** via `IntersectionObserver`
 - **Services list** with a cursor-following image card on hover
 - **Parallax** section watermarks & gallery cards
-- **Real salon details** — address, phone, hours, Google reviews (4.1 / 946)
+- **Real salon details** — address, phone, hours, Google reviews (4.4 / 1,184)
 - **Live open/closed** badge based on the visitor's local time
 - Fully **responsive** and **reduced-motion friendly**
 
@@ -68,5 +68,6 @@ Edit the tokens at the top of `css/style.css`:
 
 ## 📍 Salon
 
-> Shop 12, Linking Road, Bandra West,
-> Mumbai, Maharashtra 400050 · 📞 070306 61661 · Open daily 9 AM – 9 PM
+> Shop 15/16, Oshwal Niwas, Mahavir Nagar, Kandivali West,
+> Mumbai, Maharashtra 400067 · 📞 098209 91227 · Open daily 9 AM – 9:30 PM
+> · [lookoutsalonandacademy.in](https://lookoutsalonandacademy.in) · 🏳️‍🌈 LGBTQ+ friendly

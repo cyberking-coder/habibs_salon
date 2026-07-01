@@ -123,7 +123,7 @@ body.is-light .cursor.is-hover { background: rgba(12,10,10,.12); }
   margin-bottom: 1rem; opacity: 0; animation: loadFade .8s var(--ease) .15s forwards;
 }
 .loader__word {
-  font-family: "Archivo"; font-weight: 900; font-size: clamp(3.5rem, 18vw, 12rem);
+  font-family: "Archivo"; font-weight: 900; font-size: clamp(3rem, 15vw, 11rem);
   letter-spacing: -.05em; line-height: .85; overflow: hidden; padding: 0 .04em;
 }
 .loader__word span {
@@ -255,14 +255,15 @@ body.is-light .nav { color: var(--ink); }
 .hero__title { line-height: .82; }
 .hero__line { display: block; overflow: hidden; }
 .hero__word {
-  font-family: "Archivo"; font-weight: 900; letter-spacing: -.045em;
-  font-size: clamp(4.5rem, 22vw, 22rem); color: #fff; display: inline-block;
+  font-family: "Archivo"; font-weight: 900; letter-spacing: -.05em;
+  font-size: clamp(3.4rem, 15.5vw, 16rem); color: #fff; display: inline-block;
   text-shadow: 0 0 60px rgba(0,0,0,.15);
 }
-.hero__line--script { margin-top: -.05em; }
+.hero__line--script { margin-top: .02em; }
 .hero__line--script em {
   font-family: "Playfair Display"; font-style: italic; font-weight: 500;
-  font-size: clamp(3rem, 13vw, 13rem); color: var(--ink); display: inline-block;
+  font-size: clamp(1.5rem, 7vw, 5.5rem); color: var(--ink); display: inline-block;
+  letter-spacing: -.01em;
 }
 .hero__meta {
   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
@@ -500,8 +501,8 @@ body.is-light .nav { color: var(--ink); }
    ========================================================= */
 .footer { background: var(--ink); color: #fff; padding: clamp(3rem,6vw,5rem) var(--pad) 2rem; overflow: hidden; }
 .footer__big {
-  font-family: "Archivo"; font-weight: 900; font-size: clamp(4rem,24vw,22rem);
-  letter-spacing: -.05em; line-height: .8; text-align: center; color: #fff;
+  font-family: "Archivo"; font-weight: 900; font-size: clamp(2.6rem,18vw,15rem);
+  letter-spacing: -.055em; line-height: .8; text-align: center; color: #fff;
   -webkit-text-stroke: 1px rgba(255,255,255,.25); color: transparent;
   transition: color .6s var(--ease), -webkit-text-stroke-color .6s var(--ease);
   margin-bottom: 2rem; max-width: var(--maxw); margin-inline: auto;
